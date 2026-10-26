@@ -1,0 +1,29 @@
+[project]
+name = "sydney-rental-tracker"
+version = "0.1.0"
+description = "This project loads Sydney's rental data available from September 2023 to September 2026. The goal is to create a local pipeline that loads, clean and analyses the dataframe to answer several use case questions."
+readme = "README.md"
+authors = [
+    { name = "Joaquin Morales", email = "joaquinmorales13a06@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "openpyxl>=3.1.5",
+    "pandas>=3.1.0",
+    "psycopg>=3.3.6",
+    "sqlalchemy>=2.1.6",
+]
+
+[project.scripts]
+sydney-rental-tracker = "sydney_rental_tracker:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.17.2",
+]
