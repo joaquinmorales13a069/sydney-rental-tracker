@@ -2,7 +2,7 @@ services:
   db:
     image: postgres:latest
     container_name: sydney_rental_db
-    enviroment: 
+    environment: 
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
@@ -10,5 +10,5 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql
 
-  volumes:
-    postgres_data:
+volumes:
+  postgres_data:
